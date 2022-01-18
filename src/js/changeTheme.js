@@ -18,13 +18,9 @@ refs.switcher.addEventListener('change', changeTheme);
 
 function changeTheme(event) {
   if (event.target.checked) {
-    refs.body.classList.add(Theme.DARK);
-    refs.body.classList.remove(Theme.LIGHT);
-    localStorage.setItem('theme', Theme.DARK);
+    toggleTheme(Theme.DARK,Theme.LIGHT)
   } else {
-    refs.body.classList.remove(Theme.DARK);
-    refs.body.classList.add(Theme.LIGHT);
-    localStorage.setItem('theme', Theme.LIGHT);
+    toggleTheme(Theme.LIGHT,Theme.DARK)
   }
 }
 (function(){
@@ -34,10 +30,7 @@ refs.body.classList.add(
 refs.switcher.checked = localStorage.getItem('theme') === Theme.DARK;
 })();
 
-// function themeDefault() {
-//   if (refs.body.classList.contains(Theme.DARK)) {
-//     refs.switcher.checked = true;
-//   } else {
-//     refs.switcher.checked = false;
-//   }
-// }
+function toggleTheme(add,rem){
+  refs.body.classList.replace(rem,add);
+  localStorage.setItem('theme', add);
+}
