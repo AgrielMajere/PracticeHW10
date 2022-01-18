@@ -28,10 +28,11 @@ function changeTheme(event) {
   }
 }
 (function(){
-refs.body.classList.add(localStorage.getItem('theme')?localStorage.getItem('theme'):Theme.LIGHT,
+refs.body.classList.add(
+  localStorage.getItem('theme') ? localStorage.getItem('theme') : Theme.LIGHT,
 );
 refs.switcher.checked = localStorage.getItem('theme') === Theme.DARK;
-})()
+})();
 
 // function themeDefault() {
 //   if (refs.body.classList.contains(Theme.DARK)) {
