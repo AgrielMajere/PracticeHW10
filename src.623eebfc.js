@@ -11,4 +11,4 @@ module.exports=[{id:"XWaQXcbk0",name:"Картофель, запеченный �
 },{"../templates/menuCards.hbs":"GaNl","../data/menu.json":"ad8f"}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/changeTheme"),console.log("hello");
 },{"./js/changeTheme":"JW5E"}]},{},["Focm"], null)
-//# sourceMappingURL=/PracticeHW10/src.f1ce0830.js.map
+//# sourceMappingURL=/PracticeHW10/src.623eebfc.js.map
